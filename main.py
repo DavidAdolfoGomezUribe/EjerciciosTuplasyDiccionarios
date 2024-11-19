@@ -1,4 +1,4 @@
-from diseñodemenus.desing import desingTypeOneExOne,desingTypeOneExTwo
+from diseñodemenus.desing import desingTypeOneExOne,desingTypeOneExTwo,desingTypeOneExThree
 import time
 
 
@@ -29,4 +29,8 @@ if exercicesTypeSelector == 1:
             time.sleep(1)
 
         elif exerciceSelector == 3:
-            break
+            desingTypeOneExThree()
+            time.sleep(1)
+            print("    Regresando al menu |Ejercicios de Listas y Tuplas| \n")
+            time.sleep(1)
+            
