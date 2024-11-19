@@ -81,6 +81,15 @@ def desingTypeOneExTwo():
 
 
 def desingTypeOneExThree():
+
+    while True: 
+        try:
+            print("    Este es")
+            pass
+        except ValueError:
+            pass
+            
+
     
     
     
