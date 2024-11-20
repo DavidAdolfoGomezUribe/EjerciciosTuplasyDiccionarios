@@ -59,8 +59,6 @@ def leer_json_a_dicionario(ruta):
         return []
 
 
-
-
 def agregar_datos_a_lista(lista, nuevos_datos):
     """
     Agrega nuevos datos a una lista existente.
