@@ -221,7 +221,58 @@ def desingTypeOneExFive():
 #las asignaturas que el usuario tiene que repetir.
 
 def desingTypeOneExSix():
-    pass
+    print("\nDISCLAIMER: For this especific type of exercise we accept true only notes above 50 pts\n")
+    ruta = "databases/dataTypeOneExSix.json"
+        
+    mattersAndNotes = leer_json_a_dicionario(ruta)
+    
+    if mattersAndNotes :
+        allMatters = []
+        
+    else :
+        allMatters = []
+        mattersAndNotes={}
+
+    print("    This is a program to match the subjects with the note")
+    while True: 
+        try:
+            matters = str(input("    Enter the subjects: "))
+            allMatters.append(matters)
+                        
+            awnser = int(input(f"    Do you need to add more? 1)yes 2)no (1-2)" ))
+
+            
+            if awnser != 1:
+                dictlen = len(allMatters)
+                
+                for i in range(0,dictlen):
+                    
+                    noteMatter = int(input(f"    Enter the note for {allMatters[i]}: "))
+
+                    if noteMatter < 50: 
+                        mattersAndNotes.update({allMatters[i]:noteMatter})
+                    else:
+                        pass
+
+                    
+                    
+                guardar_lista_en_json(ruta, mattersAndNotes)
+
+                for key, value in mattersAndNotes.items():
+                    print(f"    You need to repeat this subject {key} ")
+                print("")
+                break
+            
+            else:
+                pass
+                
+        except ValueError:
+            pass
+
+
+
+
+
 
 
 #last line of code
