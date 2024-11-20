@@ -171,7 +171,57 @@ def desingTypeOneExFour():
             pass
 
 
-        
-        
-        
+## Ejercicio 5
+
+#Escribir un programa que almacene en una lista los números del 1 
+#al 10 y los muestre por pantalla en orden inverso separados por comas.      
+
+
+def desingTypeOneExFive():
+    
+    ruta = "databases/dataTypeOneExFive.json"
+    lista = leer_json_a_lista(ruta)
+            
+    try:
+        while True:    
+            nuevosDatos = int(input("    Enter the numbers between 1 - 10: "))
+            
+            if nuevosDatos < 1 or nuevosDatos > 10:
+                raise ValueError
+                        
+            lista.append(nuevosDatos)
+            
+            awnser = int(input(f"    Do you want to enter a new number? 1)yes 2)no: "))
+            
+            
+            if awnser == 2:
+            
+                lista.sort(reverse=True)
+                print(f"    This is the list for the numbers in descendend order ", ",".join(map(str,lista) ) )
+                
+                
+                guardar_lista_en_json(ruta, lista)
+                break
+            
+            else :
+                pass
+    except ValueError:
+        print("    Enter the correct number")
+        pass
+
+
+
+# Ejercicio 6
+
+#Escribir un programa que almacene 
+#las asignaturas de un curso (por ejemplo 
+#Matemáticas, Física, Química, Historia y Lengua) en una lista,
+#pregunte al usuario la nota que ha sacado en cada asignatura y elimine de
+#la lista las asignaturas aprobadas. Al final el programa debe mostrar por pantalla 
+#las asignaturas que el usuario tiene que repetir.
+
+def desingTypeOneExSix():
+    pass
+
+
 #last line of code
