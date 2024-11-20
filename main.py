@@ -1,4 +1,5 @@
 from diseñodemenus.desing import desingTypeOneExOne,desingTypeOneExTwo,desingTypeOneExThree
+from logic.logic import timeSleep
 import time
 
 
@@ -18,19 +19,12 @@ if exercicesTypeSelector == 1:
         exerciceSelector = int(input("    Seleccione el ejercicio que desee consultar: "))
         if exerciceSelector == 1:
             desingTypeOneExOne()
-            time.sleep(1)
-            print("    Regresando al menu |Ejercicios de Listas y Tuplas| \n")
-            time.sleep(1)
+            timeSleep()
 
         elif exerciceSelector == 2:
             desingTypeOneExTwo()
-            time.sleep(1)
-            print("    Regresando al menu |Ejercicios de Listas y Tuplas| \n")
-            time.sleep(1)
+            timeSleep()
 
         elif exerciceSelector == 3:
             desingTypeOneExThree()
-            time.sleep(1)
-            print("    Regresando al menu |Ejercicios de Listas y Tuplas| \n")
-            time.sleep(1)
-            
+            timeSleep()

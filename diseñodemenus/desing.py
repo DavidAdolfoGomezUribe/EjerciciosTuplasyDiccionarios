@@ -1,5 +1,5 @@
-from logic.logic import leer_json_a_lista, agregar_datos_a_lista, guardar_lista_en_json
-
+from logic.logic import leer_json_a_lista,leer_json_a_dicionario, agregar_datos_a_lista, guardar_lista_en_json
+import json
 
 #Ejercicios de Listas y Tuplas
 #-----------------------------
@@ -82,18 +82,51 @@ def desingTypeOneExTwo():
 
 def desingTypeOneExThree():
 
+    ruta = "databases/dataTypeOneExThree.json"
+    
+    mattersAndNotes = leer_json_a_dicionario(ruta)
+    
+
+    if mattersAndNotes :
+        allMatters = []
+        
+    else :
+        allMatters = []
+        mattersAndNotes={}
+    
+    print("    This is a program to match the subjects with the note")
     while True: 
         try:
-            print("    Este es")
-            pass
+            matters = str(input("    Enter the subjects: "))
+            allMatters.append(matters)
+                     
+            awnser = int(input("    Do you need to add more? 1)yes 2)no (1-2)" ))
+
+            
+            if awnser != 1:
+                dictlen = len(allMatters)
+                
+                for i in range(0,dictlen):
+                    noteMatter = input(f"    Enter the note for {allMatters[i]}: ")
+                    mattersAndNotes.update({allMatters[i]:noteMatter})
+
+                    
+                    
+                guardar_lista_en_json(ruta, mattersAndNotes)
+
+                for key, value in mattersAndNotes.items():
+                    print(f"    For the subjects {key} you have: {value}")
+                print("")
+                break
+            
+            else:
+                pass
+                
         except ValueError:
             pass
             
 
     
-    
-    
-    pass
 
 
-#last line if code
+ #last line if code
