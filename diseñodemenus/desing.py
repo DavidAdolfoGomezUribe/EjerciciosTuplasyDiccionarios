@@ -3,6 +3,7 @@ import json
 
 #Ejercicios de Listas y Tuplas
 #-----------------------------
+#Ejercicio 1
 #Escribir un programa que almacene las asignaturas de un
 #curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua)
 #en una lista y la muestre por pantalla.
@@ -34,6 +35,7 @@ def desingTypeOneExOne():
         except:
             pass
 
+#Ejercicio 2
 
 #scribir un programa que almacene las asignaturas de un curso
 #(por ejemplo Matemáticas, Física, Química, Historia y Lengua)
@@ -100,7 +102,7 @@ def desingTypeOneExThree():
             matters = str(input("    Enter the subjects: "))
             allMatters.append(matters)
                      
-            awnser = int(input("    Do you need to add more? 1)yes 2)no (1-2)" ))
+            awnser = int(input(f"    Do you need to add more? 1)yes 2)no (1-2)" ))
 
             
             if awnser != 1:
@@ -138,3 +140,38 @@ def desingTypeOneExThree():
 #Escribir un programa que pregunte al usuario los números ganadores 
 #de la lotería primitiva, los almacene en una lista y los muestre por 
 #pantalla ordenados de menor a mayor.
+
+def desingTypeOneExFour():
+    
+        ruta = "databases/dataTypeOneExFour.json"
+        lista = leer_json_a_lista(ruta)
+            
+        try:
+            while True:    
+                nuevosDatos = int(input("    Enter the numbers for primivite lottery: "))
+                
+                lista.append(nuevosDatos)
+                
+                awnser = int(input(f"    Do you want to enter a new number? 1)yes 2)no: "))
+                
+                
+                if awnser == 2:
+                
+                    lista.sort()
+                    print(f"    This is the winning numbers for primitive lottery \n    {lista}")
+                    
+                    
+                    guardar_lista_en_json(ruta, lista)
+                    break
+                
+                else :
+                    
+                    pass
+        except:
+            pass
+
+
+        
+        
+        
+#last line of code

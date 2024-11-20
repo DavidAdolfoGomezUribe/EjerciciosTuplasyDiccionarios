@@ -59,7 +59,7 @@ def leer_json_a_dicionario(ruta):
         return []
 
 
-def agregar_datos_a_lista(lista, nuevos_datos):
+def agregar_datos_a_lista(lista, nuevosDatos):
     """
     Agrega nuevos datos a una lista existente.
 
@@ -71,7 +71,7 @@ def agregar_datos_a_lista(lista, nuevos_datos):
         list: Lista actualizada.
     """
     if isinstance(lista, list):
-        lista.append(nuevos_datos)
+        lista.append(nuevosDatos)
     else:
         print("El objeto proporcionado no es una lista.")
     return lista
