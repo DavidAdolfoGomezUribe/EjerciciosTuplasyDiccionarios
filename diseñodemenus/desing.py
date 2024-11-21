@@ -318,6 +318,38 @@ def desingTypeOneExEight():
         print(f"    The word {word} is not a palindrome ")
     
     
+## Ejercicio 9
+
+#Escribir un programa que pida al usuario 
+# una palabra y muestre por pantalla el número
+# de veces que contiene cada vocal.
+
+def desingTypeOneExNine():
+    
+    ruta = "databases/dataTypeOneExNine.json"
+    
+    chain = str(input("    Enter the word")).lower()
+    
+    vocals = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
+    for caracter in chain:
+        if caracter in vocals:
+            vocals[caracter] += 1
+            
+            lista = leer_json_a_dicionario(ruta)
+            lista.update(vocals)
+        
+    vocals.update({ 'Word':str(chain)})
+    lista.update({ 'Word':str(chain)})
+    guardar_lista_en_json(ruta,lista)
+            
+            
+            
+            
+    print(f"""    The word {chain} have this amount of vocals 
+    {vocals}""")
+    
+    
+    
     
 
 
