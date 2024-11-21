@@ -1,4 +1,4 @@
-from diseñodemenus.desing import desingTypeOneExOne,desingTypeOneExTwo,desingTypeOneExThree,desingTypeOneExFour,desingTypeOneExFive,desingTypeOneExSix
+from diseñodemenus.desing import desingTypeOneExOne,desingTypeOneExTwo,desingTypeOneExThree,desingTypeOneExFour,desingTypeOneExFive,desingTypeOneExSix,desingTypeOneExSeven
 from logic.logic import timeSleep
 import time
 
@@ -40,3 +40,7 @@ if exercicesTypeSelector == 1:
         elif exerciceSelector == 6:
             desingTypeOneExSix() 
             timeSleep()
+
+        elif exerciceSelector == 7:
+            desingTypeOneExSeven()
+            timeSleep() 
