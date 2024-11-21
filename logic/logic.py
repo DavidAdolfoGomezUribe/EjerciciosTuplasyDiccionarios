@@ -39,7 +39,7 @@ def leer_json_a_dicionario(ruta):
         ruta (str): Ruta del archivo JSON.
 
     Retorna:
-        list: Lista de lista cargados desde el archivo JSON.
+        Dict: Diccionario del diciconario cargados desde el archivo JSON.
     """
     try:
         with open(ruta, 'r', encoding='utf-8') as archivo:
@@ -94,7 +94,8 @@ def guardar_lista_en_json(ruta, lista):
 
 
 def timeSleep():
+    print("")
     time.sleep(1)
-    print("    Regresando al menu |Ejercicios de Listas y Tuplas| \n")
+    print("    Regresando al menu anterior \n")
     time.sleep(1)
 

@@ -349,9 +349,46 @@ def desingTypeOneExNine():
     {vocals}""")
     
     
-    
-    
+# Ejercicio 10
 
+#Escribir un programa que almacene
+#en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8,
+#y muestre por pantalla el menor y el mayor de los precios.
+    
+def desingTypeOneExTen():
+    print("    This is a program for sort a list of numbers")
+    
+    ruta = "databases/dataTypeOneExTen.json"
+    lista = leer_json_a_lista(ruta)
+    print(f"    Numbers before {lista}")
+    lista.sort()
+    print("")
+    print(f"    Numbers after {lista}")
+    
+    
+#-----------------------------------------------------    
+#-----------------------------------------------------
+# Ejercicios de Diccionarios
+
+## Ejercicio 1
+
+#Escribir un programa que guarde en una variable el diccionario 
+# `{'Euro':'€', 'Dollar':'$', 'Yen':'¥'}`, pregunte al usuario 
+# por una divisa y muestre su símbolo o un mensaje de aviso si la 
+# divisa no está en el diccionario.
+
+def desingTypeTwoExOne():
+    ruta = "databases/dataTypeTwoExOne.json"
+    currency = str(input("    Enter the currency that you want to Know its symbol: ")).lower()
+    diccionario = leer_json_a_dicionario(ruta)
+    print(f"""    {diccionario.get(currency,"This currency dont exist in this data base")}""")
+    
+def desingTypeTwoExTwo():
+    pass
+    
+    
+    
+    
 
 
     
