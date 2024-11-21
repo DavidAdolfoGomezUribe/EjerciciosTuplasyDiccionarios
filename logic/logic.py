@@ -53,10 +53,10 @@ def leer_json_a_dicionario(ruta):
             
     except FileNotFoundError:
         print("El archivo no existe.")
-        return []
+        return {}
     except json.JSONDecodeError:
         print("Error al decodificar el archivo JSON.")
-        return []
+        return {}
 
 
 def agregar_datos_a_lista(lista, nuevosDatos):

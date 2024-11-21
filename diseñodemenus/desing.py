@@ -383,8 +383,30 @@ def desingTypeTwoExOne():
     diccionario = leer_json_a_dicionario(ruta)
     print(f"""    {diccionario.get(currency,"This currency dont exist in this data base")}""")
     
+## Ejercicio 2
+
+#Escribir un programa que pregunte al usuario su nombre, 
+# edad, dirección y teléfono y lo guarde en un diccionario.
+# Después debe mostrar por pantalla el mensaje `<nombre> tiene 
+# <edad> años, vive en <dirección> y su número de teléfono es 
+# <teléfono>`.
+    
+    
+    
+    
 def desingTypeTwoExTwo():
-    pass
+    ruta = "databases/dataTypeTwoExTwo.json"
+    
+    diccionario = leer_json_a_dicionario(ruta)    
+    
+    name = str(input("    Enter your name:"))
+    
+    diccionario.update({"name",name})
+    
+    #age = str(input("    Enter your age:"))
+    #address = str(input("    Enter your address:"))
+    #phone = str(input("    Enter your phone:"))
+
     
     
     
