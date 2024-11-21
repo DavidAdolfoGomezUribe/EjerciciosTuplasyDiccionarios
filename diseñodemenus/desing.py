@@ -280,7 +280,7 @@ def desingTypeOneExSix():
 def desingTypeOneExSeven():
 
     ruta = "databases/dataTypeOneExSeven.json"
-    
+    print("    This is a program that show you all letters of the alphabet that number position is multiple of three ")
     alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J','K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     nweAlphabet = []
     
@@ -289,12 +289,36 @@ def desingTypeOneExSeven():
         
     for i in range (0,a):
         if i % 3 == 0:
-            print(f"{ alphabet[i] }")
+            print(f"    { alphabet[i] }")
             nweAlphabet.append(alphabet[i])
 
         
     guardar_lista_en_json(ruta,nweAlphabet)
 
+## Ejercicio 8
+
+#Escribir un programa que pida al usuario una
+# palabra y muestre por pantalla si es un palíndromo.
+
+def desingTypeOneExEight():
+    ruta = "databases/dataTypeOneExEight.json"
+    print("    This is a program to know if a word is palindrome or not")
+    word = str(input("    Enter the word: "))
+    firstWord = []
+    firstWord.append(word)
+    secondWord = [chain[::-1] for chain in firstWord]
+    
+    if firstWord == secondWord:
+        print(f"    The word {word} is palindrome ")
+        lista = leer_json_a_lista(ruta)
+        lista.append(word)
+        guardar_lista_en_json(ruta,lista)
+        
+    else:
+        print(f"    The word {word} is not a palindrome ")
+    
+    
+    
 
 
 
