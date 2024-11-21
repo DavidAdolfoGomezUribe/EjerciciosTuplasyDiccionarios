@@ -400,13 +400,20 @@ def desingTypeTwoExTwo():
     diccionario = leer_json_a_dicionario(ruta)    
     
     name = str(input("    Enter your name:"))
+    diccionario.update({"name": name})
     
-    diccionario.update({"name",name})
-    
-    #age = str(input("    Enter your age:"))
-    #address = str(input("    Enter your address:"))
-    #phone = str(input("    Enter your phone:"))
+    age = str(input("    Enter your age:"))
+    diccionario.update({"age": age})
 
+    address = str(input("    Enter your address:"))
+    diccionario.update({"address": address})
+    
+    phone = str(input("    Enter your phone:"))
+    diccionario.update({ "phone" : phone})
+
+    
+    print(f"""    {diccionario.get("name")} have {diccionario.get("age")} years , live in {diccionario.get("address")} and his/her number is {diccionario.get("phone")}""")
+    guardar_lista_en_json(ruta, diccionario)
     
     
     

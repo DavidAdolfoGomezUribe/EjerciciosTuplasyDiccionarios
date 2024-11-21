@@ -70,6 +70,7 @@ while True:
                     print("    Enter a valid option")
                     pass
                 
+
         elif exercicesTypeSelector == 2:         
              while True:
                 try:
