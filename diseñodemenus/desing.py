@@ -415,7 +415,48 @@ def desingTypeTwoExTwo():
     print(f"""    {diccionario.get("name")} have {diccionario.get("age")} years , live in {diccionario.get("address")} and his/her number is {diccionario.get("phone")}""")
     guardar_lista_en_json(ruta, diccionario)
     
+# Ejercicio 3
+
+#Escribir un programa que guarde en un diccionario los precios de las frutas
+#  de la tabla, pregunte al usuario por una fruta, un número de kilos y muestre por pantalla
+#  el precio de ese número de kilos de fruta. Si la fruta no está en el diccionario debe mostrar 
+# un mensaje informando de ello.
+
+#| Fruta   | Precio |
+#| :------ | :----: |
+#| Plátano |  1.35  |
+#| Manzana |  0.80  |
+#| Pera    |  0.85  |
+#| Naranja |  0.70  |
+
+def desingTypeTwoExThree():
+    ruta = "databases/dataTypeTwoExThree.json"
+    diccionario = leer_json_a_dicionario(ruta)    
     
+    amount = int(input("    Enter the amount of the fruits tha you want to save"))
+
+    for i in range(0,amount):
+        fruit = str(input("    Enter the fruit name:")).lower()
+        price = int(input(f"    Enter the price per kilo for {fruit}"))
+        diccionario.update({fruit: price })
+        
+    print(f"    This is the articles {diccionario}")
+
+    aFruit = str(input("    Enter a fruit"))
+    value = diccionario.get(aFruit, "this fruit dont exist in this database")
+    kg = float(input("    Enter the amount of kllos"))
+    print(f"    The amount for {kg}kg of {aFruit} is: {(kg * value)} $")
+
+    guardar_lista_en_json(ruta, diccionario)
+    
+
+    
+## Ejercicio 4
+
+#Escribir un programa que pregunte una fecha en formato `dd/mm/aaaa` y
+#  muestre por pantalla la misma fecha en formato `dd de <mes> de aaaa` donde `<mes>`
+#  es el nombre del mes.
+
     
     
 
