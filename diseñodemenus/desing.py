@@ -572,9 +572,48 @@ def desingTypeTwoExSix():
 
     
     print(json.dumps(diccionario, indent=4, ensure_ascii=False))
-    
+
     guardar_lista_en_json(ruta, diccionario)
     
+
+## Ejercicio 7
+
+#Escribir un programa que cree un diccionario simulando una cesta de la compra
+# . El programa debe preguntar el artículo y su precio y añadir el par al diccionario,
+#  hasta que el usuario decida terminar. Después se debe mostrar por pantalla la 
+# lista de la compra y el coste total, con el siguiente formato
+
+#| Lista de la compra |        |
+#| :----------------- | -----: |
+#| Artículo 1         | Precio |
+#| Artículo 2         | Precio |
+#| Artículo 3         | Precio |
+#| …                  |      … |
+#| Total              |  Coste |
+
+
+def desingTypeTwoExSeven():
+    ruta = "databases/dataTypeTwoExSeven.json"
+    diccionario = leer_json_a_dicionario(ruta)    
+    total = 0
+    amount = int(input("    Enter the amount of the fruits tha you want to save"))
+
+    for i in range(0,amount):
+        fruit = str(input("    Enter the fruit name:")).lower()
+        price = int(input(f"    Enter the price per kilo for {fruit}"))
+        diccionario.update({fruit : price})
+        total =+ price + total
+        
+    
+    print(f"    |This is the articles {diccionario}")
+    print(total)
+    guardar_lista_en_json(ruta, diccionario)
+
+
+  
+
+
+
 
 
 
