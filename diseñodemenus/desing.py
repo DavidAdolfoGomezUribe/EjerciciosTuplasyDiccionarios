@@ -457,9 +457,92 @@ def desingTypeTwoExThree():
 #  muestre por pantalla la misma fecha en formato `dd de <mes> de aaaa` donde `<mes>`
 #  es el nombre del mes.
 
+def desingTypeTwoExFour():
+    ruta = "databases/dataTypeTwoExFour.json"
+    diccionario = leer_json_a_dicionario(ruta)    
     
+    date = input("    Enter a date in this format (dd/mm/aaaa): ")
+
+    day,month,year = date.split("/")
+    day = int(day)
+    month = int(month)
+    year = int(year)
+
+    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
+    print(f"    {day} of {months[month-1]} of {year}")
+    
+    diccionario.update({"day": day})
+    diccionario.update({"month": month})
+    diccionario.update({"year": year})
+    
+    guardar_lista_en_json(ruta, diccionario)
+
+    
+## Ejercicio 5
+
+#Escribir un programa que almacene el diccionario con   los créditos
+#  de las asignaturas de un curso `{'Matemáticas': 6, 'Física': 4,
+#  'Química': 5}` y después muestre por pantalla los
+#  créditos de cada asignatura en el formato `<asignatura>
+#  tiene <créditos> créditos`, donde `<asignatura>`
+#  es cada una de las asignaturas del curso, y `<créditos>`
+#  son sus créditos. Al final debe mostrar también el número total 
+# de créditos del curso.    
     
 
+def desingTypeTwoExFive():
+
+    ruta = "databases/dataTypeTwoExFive.json"
+    
+    mattersAndNotes = leer_json_a_dicionario(ruta)
+    
+
+    if mattersAndNotes :
+        allMatters = []
+        temporalList = []
+        
+    else :
+        allMatters = []
+        mattersAndNotes={}
+        temporalList = []
+    
+    print("    This is a program to match the subjects with the note")
+    while True: 
+        try:
+            matters = str(input("    Enter the subjects: "))
+            allMatters.append(matters)
+                     
+            awnser = int(input(f"    Do you need to add more? 1)yes 2)no (1-2)" ))
+
+            
+            if awnser != 1:
+                dictlen = len(allMatters)
+                
+                for i in range(0,dictlen):
+                    noteMatter = input(f"    Enter the note for {allMatters[i]}: ")
+                    mattersAndNotes.update({allMatters[i]:noteMatter})
+
+                    
+                guardar_lista_en_json(ruta, mattersAndNotes)
+
+
+                for key, value in mattersAndNotes.items():
+                    print(f"    For the subjects {key} you have this credits : {value}")
+                    temporalList.append(int(value))
+                
+                total = sum(temporalList)
+                print(f"    This is the sum to all the credits: {total} ")
+                
+
+                break
+            
+            else:
+                pass
+                
+        except ValueError:
+            pass
+            
 
     
 

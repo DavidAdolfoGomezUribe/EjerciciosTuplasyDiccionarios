@@ -1,4 +1,4 @@
-from diseñodemenus.desing import desingTypeOneExOne,desingTypeOneExTwo,desingTypeOneExThree,desingTypeOneExFour,desingTypeOneExFive,desingTypeOneExSix,desingTypeOneExSeven,desingTypeOneExEight,desingTypeOneExNine,desingTypeOneExTen,desingTypeTwoExOne,desingTypeTwoExTwo,desingTypeTwoExThree
+from diseñodemenus.desing import desingTypeOneExOne,desingTypeOneExTwo,desingTypeOneExThree,desingTypeOneExFour,desingTypeOneExFive,desingTypeOneExSix,desingTypeOneExSeven,desingTypeOneExEight,desingTypeOneExNine,desingTypeOneExTen,desingTypeTwoExOne,desingTypeTwoExTwo,desingTypeTwoExThree,desingTypeTwoExFour,desingTypeTwoExFive
 
 from logic.logic import timeSleep
 import time
@@ -89,7 +89,14 @@ while True:
                         desingTypeTwoExThree()
                         timeSleep()
                     
+                    if exerciceSelector == 4:
+                        desingTypeTwoExFour()
+                        timeSleep()
                         
+                    if exerciceSelector == 5:
+                        desingTypeTwoExFive()
+                        timeSleep()
+                                            
                         
                 except ValueError:
                     pass
