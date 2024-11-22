@@ -543,10 +543,38 @@ def desingTypeTwoExFive():
         except ValueError:
             pass
             
+## Ejercicio 6
+
+#Escribir un programa que cree un diccionario vacío y lo vaya llenado con información
+#  sobre una persona (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida 
+# al usuario. Cada vez que se añada un nuevo dato debe imprimirse el contenido del diccionario.
 
     
+def desingTypeTwoExSix():
 
+    ruta = "databases/dataTypeTwoExSix.json"
+    
+    diccionario = leer_json_a_lista(ruta)    
+    
+    name = str(input("    Enter your name:"))
+    age = str(input("    Enter your age:"))
+    address = str(input("    Enter your address:"))
+    phone = str(input("    Enter your phone:"))
 
+    nuevo_diccionario = {
+        "name": name,
+        "age": age,
+        "address": address,
+        "phone": phone
+    }
+    
+    diccionario.append(nuevo_diccionario)
+
+    
+    print(json.dumps(diccionario, indent=4, ensure_ascii=False))
+    
+    guardar_lista_en_json(ruta, diccionario)
+    
 
 
 
